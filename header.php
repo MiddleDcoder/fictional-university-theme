@@ -8,6 +8,5 @@
     <?php wp_head(); ?> <!-- load all file needed css and plugins-->
 </head>
 <body>
+    <h1>Fictional University</h1>
     
-</body>
-</html>
