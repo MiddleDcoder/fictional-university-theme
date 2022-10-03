@@ -12,17 +12,12 @@
             <div class="site-footer__col-two">
               <h3 class="headline headline--small">Explore</h3>
               <nav class="nav-list">
-                <?php
-                  wp_nav_menu(array(
-                    'theme_location' => 'footerLocationOne'
-                  ));
-                ?>
-                <!-- <ul>
+                <ul>
                   <li><a href="<?php echo site_url('/about-us'); ?>">About Us</a></li>
                   <li><a href="#">Programs</a></li>
                   <li><a href="#">Events</a></li>
                   <li><a href="#">Campuses</a></li>
-                </ul> -->
+                </ul>
               </nav>
             </div>
 
