@@ -15,9 +15,21 @@
       <div class="full-width-split__inner">
         <h2 class="headline headline--small-plus t-center">Upcoming Events</h2>
         <?php
+            $today = date('Ymd');
             $homepageEvents = new WP_Query(array(
-                'posts_per_page' => 2,
-                'post_type' => 'event'
+                'posts_per_page' => -1,
+                'post_type' => 'event',
+                'meta_key' => 'event_date',
+                'orderby' => 'meta_value_num',
+                'order' => 'ASC',
+                'meta_query' => array(
+                  array(
+                    'key' => 'event_date',
+                    'compare' => '>=',
+                    'value' => $today,
+                    'type' => 'numeric'
+                  )
+                )
             ));
 
             while ($homepageEvents->have_posts()) {
@@ -57,7 +69,6 @@
             
             while ($homepagePosts->have_posts()) {
                 $homepagePosts->the_post(); ?>
-                <li><?php the_title(); ?></li>
         <div class="event-summary">
           <a class="event-summary__date event-summary__date--beige t-center" href="<?php the_permalink(); ?>">
             <span class="event-summary__month"><?php the_time('M'); ?></span>
