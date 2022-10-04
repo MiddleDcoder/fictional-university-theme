@@ -1,0 +1,5 @@
+This folder is for the must use plugins can't be deactivated
+
+these folder and files must live under the wp-content folder in wordpress admin files
+
+"Watch Out" : This is only a copy of the mu-plugins folder for github push files
