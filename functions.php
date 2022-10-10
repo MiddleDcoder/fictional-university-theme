@@ -82,12 +82,11 @@ add_action('pre_get_posts', 'university_adjust_queries');
 
 // google map api key
 // ONLY ENABLED THIS IF YOU HAVE API KEY REGISTERED BILLING
-/*
+
 function universityMapKey($api)
 {
-  $api['key'] = 'APIKEY_FROM_GOOGLE_PAST_HERE';
+  $api['key'] = 'AIzaSyD-rmDQCPqTJHoGXKyOwk0Ogd9GLN7kl_8';
   return $api;
 }
 
 add_filter('acf/fields/google_map/api', 'universityMapKey');
-*/
